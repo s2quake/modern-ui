@@ -8,7 +8,7 @@
             "name": "Launch",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/Ntreev.ModernUI.Framework/Ntreev.ModernUI.Shell/bin/Debug/netcoreapp3.0/Ntreev.ModernUI.Shell.dll",
+            "program": "${workspaceFolder}/Ntreev.ModernUI.Framework/Ntreev.ModernUI.Shell/bin/Debug/netcoreapp3.1/Ntreev.ModernUI.Shell.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Ntreev.ModernUI.Framework",
             "stopAtEntry": false
