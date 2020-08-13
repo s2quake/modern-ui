@@ -1,10 +1,6 @@
 # font-generator
 
-FreeType Based Font Texture Generator
-
-![main](./image01.png)
-
-![preview](./image02.png)
+modern-ui is wpf based framework for crema that is development tool for game data.
 
 ## Development Environment
 
@@ -14,9 +10,21 @@ FreeType Based Font Texture Generator
 
 ## Build an Run
 
-    git clone https://github.com/s2quake/font-generator.git --recursive
-    cd font-generator
-    dotnet restore ./JSSoft.Font
-    dotnet build --framework netcoreapp3.1 ./JSSoft.Font
-    dotnet run --framework netcoreapp3.1 --project ./JSSoft.Font/JSSoft.Font.ApplicationHost
+    git clone https://github.com/s2quake/modern-ui --recursive
+    cd modern-ui
+    dotnet restore ./Ntreev.ModernUI.Framework
+    dotnet build --framework netcoreapp3.1 ./Ntreev.ModernUI.Framework
+    dotnet run --framework netcoreapp3.1 --project ./Ntreev.ModernUI.Framework/Ntreev.ModernUI.Shell
+
+# Screenshots
+
+![image01](./image01.png)
+
+![image02](./image02.png)
+
+![image03](./image03.png)
+
+![image04](./image04.png)
+
+![image05](./image05.png)
 
