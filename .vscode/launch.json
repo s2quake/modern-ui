@@ -8,8 +8,8 @@
             "name": "Launch",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Ntreev.ModernUI.Shell/Ntreev.ModernUI.Shell.dll",
-            "cwd": "${workspaceFolder}/Ntreev.ModernUI.Framework",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/JSSoft.ModernUI.Shell/JSSoft.ModernUI.Shell.dll",
+            "cwd": "${workspaceFolder}/JSSoft.ModernUI.Framework",
             "stopAtEntry": false
         }
     ]
