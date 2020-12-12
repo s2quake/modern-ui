@@ -13,8 +13,8 @@ modern-ui is wpf based framework for crema that is development tool for game dat
     git clone https://github.com/s2quake/modern-ui --recursive
     cd modern-ui
     dotnet restore
-    dotnet build --framework netcoreapp3.1
-    dotnet run --framework netcoreapp3.1 --project ./JSSoft.ModernUI.Framework/JSSoft.ModernUI.Shell
+    dotnet build --framework netcoreapp3.1 --configuration Release
+    dotnet run --framework netcoreapp3.1 --configuration Release --project ./JSSoft.ModernUI.Framework/JSSoft.ModernUI.Shell
 
 # Screenshots
 
