@@ -1,9 +1,9 @@
 [submodule "JSSoft.Library"]
 	path = JSSoft.Library
-	url = ../../s2quake/JSSoft.Library.git
+	url = https://github.com/s2quake/JSSoft.Library.git
 [submodule "JSSoft.Library.Commands"]
 	path = JSSoft.Library.Commands
-	url = ../../s2quake/JSSoft.Library.Commands.git
+	url = https://github.com/s2quake/JSSoft.Library.Commands.git
 [submodule "JSSoft.ModernUI.Framework"]
 	path = JSSoft.ModernUI.Framework
-	url = ../../s2quake/JSSoft.ModernUI.Framework.git
+	url = https://github.com/s2quake/JSSoft.ModernUI.Framework.git

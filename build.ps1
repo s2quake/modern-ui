@@ -19,21 +19,36 @@
 # Forked from https://github.com/NtreevSoft/Ntreev.ModernUI.Framework
 # Namespaces and files starting with "Ntreev" have been renamed to "JSSoft".
 
+param(
+    [string]$OutputPath = "bin",
+    [string]$Framework = "netcoreapp3.1",
+    [string]$KeyPath = "",
+    [string]$LogPath = "",
+    [switch]$Force
+)
+
+$solutionPath = "./modern-ui.sln"
+$propPaths = (
+    "./JSSoft.Library/Directory.Build.props",
+    "./JSSoft.Library.Commands/Directory.Build.props",
+    "./JSSoft.ModernUI.Framework/Directory.Build.props"
+)
+
+if (!(Test-Path $OutputPath)) {
+    New-Item $OutputPath -ItemType Directory
+}
+$OutputPath = Resolve-Path $OutputPath
 $location = Get-Location
+$buildFile = "./.vscode/build.ps1"
 try {
     Set-Location $PSScriptRoot
-    $buildFile = "./.vscode/build.ps1"
-    $propsPath = (
-        "./JSSoft.Library/Directory.Build.props",
-        "./JSSoft.Library.Commands/Directory.Build.props",
-        "./JSSoft.ModernUI.Framework/Directory.Build.props"
-    ) | ForEach-Object { "`"$_`"" }
-    $propsPath = $propsPath -join ","
-    $solutionPath = "./modern-ui.sln"
+    $propPaths = $propPaths | ForEach-Object { Resolve-Path $_ }
+    $solutionPath = Resolve-Path $solutionPath
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/s2quake/build/master/build.ps1" -OutFile $buildFile
-    Invoke-Expression "$buildFile $solutionPath $propsPath $args"
+    $buildFile = Resolve-Path $buildFile
+    & $buildFile $solutionPath $propPaths -Publish -KeyPath $KeyPath -Sign -OutputPath $OutputPath -Framework $Framework -LogPath $LogPath -Force:$Force
 }
 finally {
-    Remove-Item ./.vscode/build.ps1
+    Remove-Item $buildFile
     Set-Location $location
 }
