@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "launch-application",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/JSSoft.ModernUI.Shell/JSSoft.ModernUI.Shell.dll",
-            "cwd": "${workspaceFolder}/JSSoft.ModernUI.Framework",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/JSSoft.ModernUI.Framework/JSSoft.ModernUI.Shell/bin/Debug/netcoreapp3.1/modernApp.dll",
+            "cwd": "${workspaceFolder}/JSSoft.ModernUI.Framework/JSSoft.ModernUI.Shell/bin/Debug/netcoreapp3.1",
             "stopAtEntry": false
         }
     ]
